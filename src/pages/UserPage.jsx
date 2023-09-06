@@ -1,13 +1,10 @@
 import { useContext, useEffect } from "react";
-import { CountButton } from "../components/CountButton/CountButton";
 import { ContentSection } from "../components/contentSection/ContentSection";
-import {UserContext} from "../content/UserContext"
+import { UserContext } from "../content/UserContext"
 
 export const UserPage = (props) => {
 
   const {user} = useContext(UserContext)
-
-  
 
   return (
 

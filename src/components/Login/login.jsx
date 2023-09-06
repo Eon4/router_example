@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { UserContext } from "../../content/UserContext";
 
 export const Login = () => {
-
     const {setUser,user} = useContext(UserContext);
 
 

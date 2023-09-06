@@ -1,4 +1,10 @@
+import { useContext } from "react";
+import { UserContext } from "../../content/UserContext";
+
 export const Login = () => {
+
+    const {setUser,user} = useContext(UserContext);
+
 
     const submitHandler = (event) => {
         event.preventDefault()
@@ -9,7 +15,7 @@ export const Login = () => {
 
 if (username !== "" &&  password !== ""  ) {
 
-    const url = "'https://dummyjson.com/auth/login'";
+    const url = 'https://dummyjson.com/auth/login';
     const options = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -21,23 +27,23 @@ if (username !== "" &&  password !== ""  ) {
 
     fetch (url, options)
     .then((res) => res.json())
-    .then((data) => console.log(data))
-    .then((err) => console.error(err));
+    // .then((data) => console.log(data))
+    .then((data) => setUser(data))
 
-
+    // .then((err) => console.error(err));
 }
 else {
-    alert('du skal udfylde felterne!')
+    alert('du skal udfylde felterne fær du sender!')
 }
 
         console.log("username:", event.target.username.value)
         console.log("password:", event.target.password.value)
-
     }
 
-
-
     return (
+        user.username ?
+        <h3>Velkommen {user.username} </h3>
+        :
         <form onSubmit={(event) => submitHandler(event)}>
             <label>
                 Brugernavn:

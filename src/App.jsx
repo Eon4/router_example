@@ -5,12 +5,15 @@ import { AboutPage } from "./pages/AboutPage";
 import { BlogPage } from "./pages/BlogPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { Login } from "./components/Login/login";
+import { UserContextProvider } from "./content/UserContext";
 
 //login til komponent - post til en server og få en bruger tilbage
 //user komponent - se brugerens emial og navn
 
 function App() {
   return (
+    <UserContextProvider>
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout/>}>
@@ -22,6 +25,8 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      </UserContextProvider>
+
   );
 }
 

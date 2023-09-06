@@ -8,7 +8,7 @@ export const UserPostPage = () => {
 
     const {user} = useContext(UserContext)
     const [errorMsg, setErrorMsg] = useState("")
-    const [userPosts, setUserPosts] = useState("")
+    const [userPosts, setUserPosts] = useState(null);
 
     const navigate = useNavigate()
 
@@ -54,8 +54,16 @@ export const UserPostPage = () => {
         <section>
             <h3>posts</h3>
             <h4>{errorMsg}</h4>
+            {userPosts?.posts.map((item) => {
+                return (
+
+                    <div key = {item.id}>
+                    <p> {item.title} </p>
+                    <p> {item.title} </p>
+                    </div>
+                )
+                 })}
         </section>
-    )
+    );
 
-
-}
+};

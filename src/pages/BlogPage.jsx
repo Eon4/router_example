@@ -4,12 +4,13 @@ import { ContentSection } from "../components/contentSection/ContentSection";
 
 export const BlogPage = () => {
   // Eksempel der viser Mount / unmount logik
-  useEffect(() => {
-    console.log("Blog Page Component has Mounted");
-    return () => {
-      console.log("Blog Page Component has Un-Mounted");
-    };
-  }, []);
+
+  // useEffect(() => {
+  //   console.log("Blog Page Component has Mounted");
+  //   return () => {
+  //     console.log("Blog Page Component has Un-Mounted");
+  //   };
+  // }, []);
 
   return (
     <ContentSection title="Blog Page">

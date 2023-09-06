@@ -19,10 +19,9 @@ export const Navigation = () => {
             <div>
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
-                <Link to="/blog">Blog</Link>
                 <Link to="/login">login</Link>
                 <Link to="/userposts">Posts</Link>
-
+                <Link to="/User">User</Link>
 
             </div>
         </nav>

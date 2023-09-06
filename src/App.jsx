@@ -6,6 +6,7 @@ import { BlogPage } from "./pages/BlogPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { Login } from "./components/Login/login";
 import { UserContextProvider } from "./content/UserContext";
+import { UserPostPage } from "./pages/UserPostPage";
 
 //login til komponent - post til en server og få en bruger tilbage
 //user komponent - se brugerens emial og navn
@@ -22,6 +23,7 @@ function App() {
             <Route path="/blog" element={<BlogPage/>}/>
             <Route path="*" element={<NotFoundPage/>}/>
             <Route path = "/login" element = {<Login/>}/>
+            <Route path = "/userposts" element = {<UserPostPage/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

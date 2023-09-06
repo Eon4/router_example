@@ -38,12 +38,20 @@ else {
 
         console.log("username:", event.target.username.value)
         console.log("password:", event.target.password.value)
-    }
+    };
+
+    if (user?.firstName)
 
     return (
-        user.username ?
-        <h3>Velkommen {user.username} </h3>
-        :
+        <>
+         <h3>Velkommen {user.username} </h3>
+          <button onClick={() => setUser(null)}>Log ud</button>
+        </>
+
+    )
+else 
+    return (
+
         <form onSubmit={(event) => submitHandler(event)}>
             <label>
                 Brugernavn:
